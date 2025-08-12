@@ -1,5 +1,5 @@
 #!/bin/bash
-cd BE
+cd /var/jenkins_home/workspace/petsclinic/BE
 git clone https://github.com/spring-petclinic/spring-petclinic-rest.git
 cd spring-petclinic-rest
 ./mvnw package
