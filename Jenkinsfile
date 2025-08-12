@@ -1,6 +1,10 @@
 pipeline {
     agent any 
 
+    tools {
+        nodejs 'NodeJs-jenkins'
+    }
+
     stages {
         stage('Build') {
             steps {
