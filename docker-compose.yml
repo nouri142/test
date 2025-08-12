@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  backend:
+    build: ./BE # Path to your backend Dockerfile
+    ports:
+      - "8080:8080"   
+    networks:
+      - net
+
+  frontend:
+    build: ./FE # Path to your frontend Dockerfile
+    ports:
+      - "80:80" 
+    depends_on:
+      - backend # Frontend depends on the backend being available
+    networks:
+      - net
+  
+networks:
+   net:
+    driver: bridge
+
+
+
