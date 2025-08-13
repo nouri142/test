@@ -13,7 +13,7 @@ pipeline {
                 sh '''
                    $WORKSPACE/BE/build.sh
                    $WORKSPACE/FE/build.sh
-                   docker compose up 
+                   docker compose up -d
                    '''
             }
         }
