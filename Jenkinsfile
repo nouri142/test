@@ -14,8 +14,8 @@ pipeline {
             steps {
 
                 sh '''
-                  // $WORKSPACE/BE/build.sh
-                 //  $WORKSPACE/FE/build.sh
+                   $WORKSPACE/BE/build.sh
+                   $WORKSPACE/FE/build.sh
                    docker compose up 
                    '''
             }
